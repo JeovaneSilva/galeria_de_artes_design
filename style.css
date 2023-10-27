@@ -186,13 +186,16 @@ body{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     opacity: 0.6;
     transition: 0.5s;
+}
+
+#featured-images .banner-content:hover{
+    background-color: white;
 }
 
 @media(min-width:768px){
