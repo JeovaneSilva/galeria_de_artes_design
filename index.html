@@ -17,13 +17,13 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="style.css">
-    <title>Jean</title>
+    <title>Jean Designes </title>
 </head>
 <body>
 
-    <header>
+    <header class=".cabeca">
         <h1>Jean silva</h1>
-        <p>Designer Full Mobile</p>
+        <p>Designes Full Mobile</p>
     </header>
 
 
@@ -54,24 +54,24 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="imagens/design-1.jpg" class="d-block w-100" alt="Casa 1" />
+              <img src="imagens/design-1.jpg" class="d-block w-100" alt="design 1" />
               <div class="carousel-caption">
                 <h5>Designes criativos</h5>
-                <a href="#" class="btn btn-dark">Ver Projeto</a>
+                <a href="#featured-container" class="btn btn-dark">Ver Projeto</a>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="imagens/designe-2.jpg" class="d-block w-100" alt="Casa 2" />
+              <img src="imagens/designe-2.jpg" class="d-block w-100" alt="design 2" />
               <div class="carousel-caption">
                 <h5>Full Mobile</h5>
-                <a href="#" class="btn btn-dark">Ver Projeto</a>
+                <a href="#featured-container" class="btn btn-dark">Ver Projeto</a>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="imagens/design-3.jpg" class="d-block w-100" alt="Casa 3" />
+              <img src="imagens/design-3.jpg" class="d-block w-100" alt="design 3" />
               <div class="carousel-caption">
                 <h5>Peça a sua</h5>
-                <a href="#" class="btn btn-dark">Ver Projeto</a>
+                <a href="#featured-container" class="btn btn-dark">Ver Projeto</a>
                 </div>
             </div>
         </div>
@@ -99,23 +99,23 @@
         <div class="row">
             <div class="col-12 col-md-4">
                 <div class="card text-center">
-                    <i class="bi bi-box primary-color"></i>
+                    <i class="bi bi-brush primary-color"></i>
                     <div class="card-body">
-                        <h5 class="card-title primary-color">Projetos Completos</h5>
-                        <p class="card-text secondary-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        <h5 class="card-title primary-color">Visão Artística</h5>
+                        <p class="card-text secondary-color">Deixe-se levar por uma jornada visual que transcende a imaginação e que dá vida ao design.
                         </p>
-                        <a href="#" class="btn btn-dark">Saber Mais</a>
+                        
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="card text-center">
-                    <i class="bi bi-layers primary-color"></i>
+                    <i class="bi bi-gem primary-color"></i>
                     <div class="card-body">
-                        <h5 class="card-title primary-color">Você participa também</h5>
-                        <p class="card-text secondary-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        <h5 class="card-title primary-color">Criações Únicas</h5>
+                        <p class="card-text secondary-color">Explore um mundo de design onde cada criação é verdadeiramente única.
                         </p>
-                        <a href="#" class="btn btn-dark">Saber Mais</a>
+                        
                     </div>
                 </div>
             </div>
@@ -123,10 +123,10 @@
                 <div class="card text-center">
                     <i class="bi bi-lightning-charge primary-color"></i>
                     <div class="card-body">
-                        <h5 class="card-title primary-color">Adiantamento de entregas</h5>
-                        <p class="card-text secondary-color">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        <h5 class="card-title primary-color">Designer Criativo</h5>
+                        <p class="card-text secondary-color">você encontrará um tesouro de ideias frescas e conceitos inovadores.
                         </p>
-                        <a href="#" class="btn btn-dark">Saber Mais</a>
+                       
                     </div>
                 </div>
             </div>
@@ -184,6 +184,13 @@
                         <h3>Richarlison</h3>
                     </div>
                </div>
+               <div class="col-12 col-md-4">
+                <img src="imagens/bellingham.png" alt="Projeto 1" class="img-fluid">
+                <div class="banner-content">
+                    <p class="secondary-color">Esportes</p>
+                    <h3>Jude Bellingham</h3>
+                </div>
+           </div>
             </div>
        </div>
     </section>
@@ -197,14 +204,13 @@
               <div class="row justify-content-between">
                 <div class="col-4">
                   <h2>
-                    Jean.244
+                    Jean Silva
                   </h2>
                 </div>
                 <div class="col-4" id="social-icons">
-                  <i class="bi bi-facebook"></i>
-                  <i class="bi bi-instagram"></i>
-                  <i class="bi bi-youtube"></i>
-                  <i class="bi bi-twitter"></i>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/jeann.244/" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-twitter"></i></a>
                 </div>
               </div>
             </div>
@@ -214,18 +220,11 @@
                 <div class="col-12 col-md-4" id="news-container">
                   <h4>Fique por dentro das novidades</h4>
                   <p class="secondary-color">
-                    Peça seu design
+                    Quer saber mais?
                   </p>
-                  <form>
                     <div class="mb-3">
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="Digite o seu e-mail"
-                      />
+                      <button class="btn btn-dark" onclick="abrirModal()">Mandar Mensagem</button>
                     </div>
-                    <button class="btn btn-dark">Inscrever</button>
-                  </form>
                 </div>
                 <div class="col-12 col-md-4" id="contact-container">
                   <h4>Formas de contato</h4>
@@ -248,7 +247,7 @@
                         <li>
                           <a href="#" class="secondary-color">Projetos</a>
                         </li>
-                        <li><a href="#" class="secondary-color">Contato</a></li>
+                        <li><a href="#contact-container" class="secondary-color">Contato</a></li>
                       </ul>
                     </div>
                   </div>
@@ -259,7 +258,7 @@
             <div class="col-12" id="footer-bottom">
               <div class="row justify-content-between">
                 <div class="col-12 col-md-3">
-                  <p class="secondary-color">JeovaneSilva &copy; 2023</p>
+                  <p class="secondary-color">Por JeovaneSilva &copy; 2023</p>
                 </div>
                 <div class="col-12 col-md-3">
                   <p class="secondary-color">
@@ -272,5 +271,33 @@
           </div>
         </div>
     </footer>
+
+    <div class="janela-modal" id="janela-modal">
+      <section class="mod">
+        <button class="fechar" id="fechar">X</button>
+
+        <form class="forml" action="https://formsubmit.co/jeanlimadasilva392@gmail.com" method="POST">
+
+          <label for="name">Nome</label>
+          <input type="text" name="name" placeholder="Seu nome aqui" required autocomplete="off">
+
+          <label for="email">E-mail</label>
+          <input type="email" name="email" placeholder="Exemplo@gmail.com" required autocomplete="off">
+
+          <label for="message">Mensagen</label>
+          <textarea name="message" placeholder="Escreva Aqui" required autocomplete="off"></textarea>
+
+          <button type="submit" onclick="enviarEmail()">Enviar</button>
+
+          <input type="hidden" name="_next" value="https://jeansilva.netlify.app">
+          <input type="hidden" name="_subject" value="Novo envio!">
+          <input type="hidden" name="_captcha" value="false">
+
+     </form>
+      </section>
+     
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

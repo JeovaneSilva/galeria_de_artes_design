@@ -41,6 +41,15 @@ body{
 
   /* header */
 
+  header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
   header h1{
     text-align: center;
     font-size: 50px;
@@ -316,3 +325,151 @@ body{
       }
   }
 
+  /* janela modal */
+
+  .janela-modal{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.478);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .mod{
+    width: 50%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.59);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+  }
+
+  .forml{
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.125rem;
+  }
+
+  .forml label,
+  .forml input,
+  .forml textarea,
+  .forml button{
+    display: block;
+    width: 100%;
+  }
+
+  .forml label{
+    color: black;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .forml input,
+  .forml textarea{
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border-color, box-shadow 0.2s;
+  }
+
+  .forml textarea{
+    min-height: 13rem;
+    resize: vertical;
+  }
+
+  .forml input:hover,
+  .forml input:focus,
+  .forml textarea:hover,
+  .forml textarea:focus{
+    outline: none;
+    border-color: #09d;
+    box-shadow: 0 0 0 3px #4dc8ff;
+  }
+
+  .forml button{
+    display: block;
+    padding: 1rem;
+    background: #0072c4;
+    color: white;
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .forml button:hover,
+  .forml button:focus{
+    outline: none;
+    background: #09d;
+  }
+
+  .fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .janela-modal.abrir{
+    display: flex;
+  }
+
+  @keyframes abrirmodal {
+    from{
+      opacity: 0;
+      transform: translate3d(0, -20px, -5px);
+    }
+
+    to{
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .abrir .modal{
+    animation: abrirmodal 0.3s;
+  }
+
+  @media (max-width: 600px){
+    .mod{
+      width: 300px;
+      min-width: 0;
+      min-height: 0;
+    }
+    
+    .forml input,
+    .forml textarea{
+    padding: 0.1rem;
+  }
+
+  .forml button{
+    display: block;
+    padding: 0.3rem;
+    background: #0072c4;
+    color: white;
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  }
