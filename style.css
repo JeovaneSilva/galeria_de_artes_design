@@ -456,20 +456,12 @@ body{
     
     .forml input,
     .forml textarea{
-    padding: 0.1rem;
+    padding: 0.4rem;
+    font-size: 13px;
   }
 
   .forml button{
-    display: block;
     padding: 0.3rem;
-    background: #0072c4;
-    color: white;
-    font: inherit;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
   }
 
   }
