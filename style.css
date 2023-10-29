@@ -108,6 +108,10 @@ body{
 }
 
 @media(min-width:768px){
+  #slider{
+    margin-bottom: 1em;
+}
+
     #slider .carousel-caption{
         bottom: 15em;
     }
