@@ -39,7 +39,9 @@
 <p><br></p>
 <h1>Tela Mandar Mensagem</h1>
 <img src="imagens/tela-contatos.png" >
+</div>
 <p><br></p>
+
 
 ## ​🚨Importante:
 <ul>
@@ -50,6 +52,7 @@
 <li>Utilização do <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank">BOOTSTRAP 5</a></li>
 
 <li>Icons retirados do <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons.</a></li>
+</ul>
 
 
 <!--https://dev.to/envoy_/150-badges-for-github-pnk--!>
