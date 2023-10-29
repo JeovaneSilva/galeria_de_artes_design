@@ -238,6 +238,10 @@ body{
   #footer-top {
     margin-bottom: 2em;
   }
+
+  #footer-top .justify-content-between .col-4 h2{
+   width: 200px;
+  }
   
   #footer-top,
   #footer-top i {
