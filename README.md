@@ -32,10 +32,10 @@
 
 <div align="center" > 
 <h1>Site Versão Desktop</h1>
-<img src="imagens/galeria-designes-desktop.png" >
+<img src="imagens/galeria-designs-desktop.png" >
 <p><br></p>
 <h1> Site Versão Mobile (Responsivo) </h1>
-<img src="imagens/galeria-designes-mobile.png" >
+<img src="imagens/galeria-designs-mobile.png" >
 <p><br></p>
 <h1>Tela Mandar Mensagem</h1>
 <img src="imagens/tela-contatos.png" >
