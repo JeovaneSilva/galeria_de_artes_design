@@ -159,7 +159,32 @@ body{
    #mini-banners {
     margin-top: -6em;
    }
+
+   .card-body .card1-h1{
+    height: 48px;
+   }
+
+   .card-body .card1-p{
+    height: 120px;
+   } 
 }
+
+@media (min-width:991px){
+   .card-body .card1-h1{
+    height: 24px;
+   }
+
+   .card-body .card1-p{
+    height: 72px;
+   } 
+}
+
+@media (min-width:1400px){
+  .card-body .card1-p{
+   height: 48px;
+  } 
+}
+
 
 /*DESTAQUES*/
 #featured-container{
