@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <title>Login</title>
+</head>
+<body>
+<main>
+    
+        <form>
+            <div class="inputs">
+                <label>Email</label> 
+                <input type="email" name="email" onchange="onchangeEmail()" placeholder="Seu@email.com" id="email">
+                <div class="error" id="emailObg">Email é obrigatório </div>
+                <div class="error" id="emailInv">Email é inválido </div>
+            </div>
+    
+            <div class="inputs">
+                <label>Senha</label> 
+                <input type="password" name="password" onchange="onchangePassword()" placeholder="Senha" id="password">
+                <div class="error" id="senhaObg">Senha é obrigatória</div>
+            </div>
+    
+            <div>
+                <button type="button" class="recuperarSenha" disabled="true" id="recover-password-button">Recuperar Senha?</button>
+            </div>
+    
+            <div>
+                <button type="button" class="entrar" id="login-button" disabled="true">Entrar</button>
+            </div>
+    
+            <div>
+                <button type="button" class="registrar">Registrar</button>
+            </div>
+        </form>
+</main>
+    
+
+</body>
+<script src="../scripts/login.js"></script>
+<script src="../scripts/validacoes.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+
+<script>
+     const firebaseConfig = {
+apiKey: "AIzaSyC5E8XYNymJJbP9qvYBBobZyKvumqZkd2Y",
+authDomain: "jean-designs.firebaseapp.com",
+projectId: "jean-designs",
+storageBucket: "jean-designs.appspot.com",
+messagingSenderId: "605079963145",
+appId: "1:605079963145:web:66f230d23c4476d15e5ad8"
+};
+firebase.initializeApp(firebaseConfig);
+
+console.log('antes');
+firebase.auth().signInWithEmailAndPassword("jeovane.silva.dev@gmail.com", "Abril2007").then(response => {
+    console.log('success', response)
+}).catch(error => {
+    console.log('error', error)
+});
+console.log('depois');
+</script>
+
+</html>

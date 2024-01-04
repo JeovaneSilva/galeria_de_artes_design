@@ -1,0 +1,31 @@
+.recuperarSenha{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.entrar{
+    background-color: white;
+    border: none;
+}
+
+.registrar{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.error{
+    color: white;
+    background-color: red;
+    display: none;
+    padding: 5px;
+}
+
+button:active{
+    opacity: 0.8;
+}
+
+button[disabled]{
+    opacity: 0.7;
+}
