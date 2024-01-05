@@ -1,4 +1,15 @@
 
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      // Usuário está autenticado
+      alert('Usuário autenticado:', user);
+      window.location.href="../pages/home.html"
+    } else {
+      // Usuário não está autenticado
+      alert('Usuário não autenticado');
+    }
+  });
+  
 function onChangeEmail() {
     toggleButtonsDisable();
     toggleEmailErrors();
@@ -38,7 +49,7 @@ function recoverPassword() {
 }
 
 function getErrorMessage(error) {
-    if (error.code == "auth/user-not-found") {
+    if (error.code == "auth/invalid-login-credentials") {
         return "Usuário nao encontrado";
     }
     if (error.code == "auth/wrong-password") {
