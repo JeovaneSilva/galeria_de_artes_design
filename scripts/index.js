@@ -1,3 +1,10 @@
+function fazerLogin() {
+    window.location.href="pages/login.html"
+}
+function fazerCadastro() {
+    window.location.href="pages/registrar.html"
+}
+
 function abrirModal() {
     const header = document.querySelector('header')
     const footer = document.querySelector('footer')
