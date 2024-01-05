@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+html{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body{
+    background-image: linear-gradient(to top,rgb(192, 18, 192), black);
+}
+
+.bg-primary-color {
+    background-color: #fff;
+  }
+  
+  .bg-secondary-color {
+    background-color: #ece8e2;
+  }
+  
+  .bg-dark-color {
+    background-color: #050505;
+  }
+  
+  .primary-color {
+    color: #050505;
+  }
+  
+  .secondary-color {
+    color: #7a7a7a;
+  }
+
+  .terc-color {
+    color: white;
+  }
+
+  /* header */
+
+  header{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  header .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header .logo h1{
+    text-align: center;
+    font-size: 20px;    
+    text-transform: uppercase;
+    color: white;
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  header nav{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 30px;
+    text-transform: uppercase;
+    padding-right: 30px;
+    margin: 0;
+  }
+
+  header nav ul li{
+    list-style-type: none;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+  }
+
+  header nav ul li a:hover {
+    color: violet;
+  }
+
+/*SLIDERS*/
+#slider{
+    margin-top: 8em;
+    margin-bottom: 5em;
+}
+
+#slider .carousel-caption{
+    bottom: 3em;
+}
+
+#slider .carousel-caption h5{
+    font-size: 2.5em;
+    text-shadow: black 2px 2px;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+#slider .btn{
+    padding: 0.3 0.8em;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i{
+    color: #111;
+    font-size: 3em;
+}
+
+.carousel-indicators [data-bs-target]{
+    background-color: #222;
+    opacity: 0.8;
+}
+
+.carousel-indicators .active{
+    background-color: #000;
+}
+
+@media(min-width:768px){
+  #slider{
+    margin-bottom: 1em;
+}
+
+    #slider .carousel-caption{
+        bottom: 15em;
+    }
+
+    #slider .carousel-caption h5{
+        font-size: 4em;
+        text-shadow: black 2px 3px;
+    }
+
+    #slider .btn{
+        padding: 0.6 1.6em;
+        font-size: 1.2em;
+    }
+
+    .carousel-indicators{
+        bottom: 7em;
+    }
+}
+
+/*MINI-BANNERS*/
+#mini-banners{
+    margin-bottom: 4em;
+}
+
+#mini-banners .card{
+    padding: 2em 0.3em;
+    border-radius: 0;
+    margin-bottom: 1em;
+}
+
+#mini-banners i{
+    font-size: 4em;
+}
+
+#mini-banners .card-title{
+    margin-bottom: 1.5em;
+}
+
+#mini-banners .btn{
+    margin-top: 1.5em;
+    padding: 0.6em 1.2em;
+}
+
+@media(min-width:768px){
+   #mini-banners {
+    margin-top: -6em;
+   }
+
+   .card-body .card1-h1{
+    height: 48px;
+   }
+
+   .card-body .card1-p{
+    height: 120px;
+   } 
+}
+
+@media (min-width:991px){
+   .card-body .card1-h1{
+    height: 24px;
+   }
+
+   .card-body .card1-p{
+    height: 72px;
+   } 
+}
+
+@media (min-width:1400px){
+  .card-body .card1-p{
+   height: 48px;
+  } 
+}
+
+
+/*DESTAQUES*/
+#featured-container{
+    margin-bottom: 4em;
+}
+
+.title{
+    font-size: 1.75em;
+    margin-bottom: 0.4em;
+    position: relative;
+}
+
+.title:before{
+    width: 75px;
+    border-top: 4px solid #7a7a7a;
+    content: '';
+    position: absolute;
+    bottom: 2em;
+}
+
+#featured-images{
+    margin-top: 2em;
+}
+
+#featured-images .col-md-4{
+    position: relative;
+    cursor: pointer;
+}
+
+#featured-images .col-md-4:hover > .banner-content{
+    opacity: 0.8;
+}
+
+#featured-images .banner-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+#featured-images .banner-content:hover{
+    background-color: white;
+}
+
+@media(min-width:768px){
+    #featured-container{
+        margin-top: 8em;
+        margin-bottom: 8em;
+    }
+
+    .title{
+        font-size: 2.4em;
+    }
+
+    .title:before{
+        bottom: 1.5em;
+    }
+
+    #featured-images .banner-content{
+        opacity: 0;
+    }
+ }
+
+ /* FOOTER TOP */
+#footer {
+    padding: 3em 2em;
+  }
+  
+  #footer-top {
+    margin-bottom: 2em;
+  }
+
+  #footer-top .justify-content-between .col-4 h2{
+   width: 200px;
+  }
+  
+  #footer-top,
+  #footer-top i {
+    color: #fff;
+  }
+  
+  #social-icons {
+    text-align: right;
+  }
+  
+  #social-icons i {
+    margin-right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  #social-icons i:hover {
+    color: #7a7a7a;
+  }
+  
+  /* FOOTER DETAILS */
+  #footer-details {
+    margin-bottom: 3em;
+  }
+  
+  #news-container,
+  #contact-container,
+  #links-container {
+    padding: 0;
+    border: 0;
+    margin-bottom: 2em;
+  }
+  
+  #footer-details h4 {
+    color: #fff;
+    margin-bottom: 1.5em;
+  }
+  
+  #news-container input {
+    border-radius: 0;
+    border: none;
+  }
+  
+  #links-container li {
+    margin-bottom: 0.5em;
+  }
+  
+  #links-container a {
+    text-decoration: none;
+  }
+  
+  #links-container a:hover {
+    color: #fff;
+  }
+  
+  /* FOOTER BOTTOM */
+  #footer-bottom {
+    border-top: 1px solid #7a7a7a;
+    padding-top: 2em;
+  }
+  
+  #footer-bottom i {
+    color: #e61e10;
+  }
+  
+  @media (min-width: 768px) {
+    #news-container {
+      padding-right: 2em;
+    }
+  
+    #contact-container {
+      padding: 0 2em;
+      border-left: 1px solid #7a7a7a;
+      border-right: 1px solid #7a7a7a;
+    }
+  
+    #links-container {
+      padding-left: 2em;
+    }
+  }
+
+  @media (max-width: 600px) {
+    header h1{
+        font-size: 30px;
+      }
+    
+      header p{
+        font-size: 20px;
+      }
+  }
+
+  /* janela modal */
+
+  .janela-modal{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.478);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .mod{
+    width: 50%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.59);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+  }
+
+  .forml{
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.125rem;
+  }
+
+  .forml label,
+  .forml input,
+  .forml textarea,
+  .forml button{
+    display: block;
+    width: 100%;
+  }
+
+  .forml label{
+    color: black;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .forml input,
+  .forml textarea{
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border-color, box-shadow 0.2s;
+  }
+
+  .forml textarea{
+    min-height: 13rem;
+    resize: vertical;
+  }
+
+  .forml input:hover,
+  .forml input:focus,
+  .forml textarea:hover,
+  .forml textarea:focus{
+    outline: none;
+    border-color: #09d;
+    box-shadow: 0 0 0 3px #4dc8ff;
+  }
+
+  .forml button{
+    display: block;
+    padding: 1rem;
+    background: #0072c4;
+    color: white;
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .forml button:hover,
+  .forml button:focus{
+    outline: none;
+    background: #09d;
+  }
+
+  .fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .janela-modal.abrir{
+    display: flex;
+  }
+
+  @keyframes abrirmodal {
+    from{
+      opacity: 0;
+      transform: translate3d(0, -20px, -5px);
+    }
+
+    to{
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .abrir .modal{
+    animation: abrirmodal 0.3s;
+  }
+
+  @media (max-width: 600px){
+    .mod{
+      width: 300px;
+      min-width: 0;
+      min-height: 0;
+    }
+    
+    .forml input,
+    .forml textarea{
+    padding: 0.4rem;
+    font-size: 13px;
+  }
+
+  .forml button{
+    padding: 0.3rem;
+  }
+
+  }

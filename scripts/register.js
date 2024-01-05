@@ -1,3 +1,8 @@
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        window.location.href = "../pages/home.html";
+    }
+})
 
 function onChangeEmail() {
     const email = form.email().value;
@@ -32,7 +37,7 @@ function register() {
         email, password
     ).then(() => {
         hideLoading();
-        window.location.href = "../index.html";
+        window.location.href = "../pages/home.html";
     }).catch(error => {
         hideLoading();
         alert(getErrorMessage(error));
@@ -78,7 +83,7 @@ function isFormValid() {
 }
 
 function loginPage() {
-    window.location.href="../pages/login.html"
+    window.location.href="../index.html"
 }
 
 const form = {
