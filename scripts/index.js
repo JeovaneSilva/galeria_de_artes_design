@@ -22,7 +22,7 @@ function login() {
     firebase.auth().signInWithEmailAndPassword(
         form.email().value, form.password().value
     ).then(() => {
-        if(form.email() == "jeanlimadasilva392@gmail.com" && form.password() == "admin123"){
+        if(form.email().value == "jeanlimadasilva392@gmail.com" && form.password().value == "admin123"){
             hideLoading();
             window.location.href = "../pages/admin.html";
         } else{
