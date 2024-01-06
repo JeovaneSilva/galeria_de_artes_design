@@ -1,12 +1,9 @@
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      // Usuário está autenticado
-      alert('Usuário autenticado:', user);
       window.location.href="../pages/home.html"
     } else {
-      // Usuário não está autenticado
-      alert('Usuário não autenticado');
+      alert('Usuário não logado');
     }
   });
   
@@ -25,8 +22,14 @@ function login() {
     firebase.auth().signInWithEmailAndPassword(
         form.email().value, form.password().value
     ).then(() => {
-        hideLoading();
-        window.location.href = "../pages/home.html";
+        if(form.email() == "jeanlimadasilva392@gmail.com" && form.password() == "admin123"){
+            hideLoading();
+            window.location.href = "../pages/admin.html";
+        } else{
+            hideLoading();
+            window.location.href = "../pages/home.html";
+        }
+       
     }).catch(error => {
         hideLoading();
         alert(getErrorMessage(error));
@@ -49,7 +52,7 @@ function recoverPassword() {
 }
 
 function getErrorMessage(error) {
-    if (error.code == "auth/invalid-login-credentials") {
+    if (error.code == "auth/invalid-credential") {
         return "Usuário nao encontrado";
     }
     if (error.code == "auth/wrong-password") {

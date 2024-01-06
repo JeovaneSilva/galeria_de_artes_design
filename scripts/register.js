@@ -1,12 +1,9 @@
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      // Usuário está autenticado
-      alert('Usuário autenticado:', user);
       window.location.href="../pages/home.html"
     } else {
-      // Usuário não está autenticado
-      alert('Usuário não autenticado');
+      alert('Usuário não logado');
     }
   });
 

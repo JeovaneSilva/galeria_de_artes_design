@@ -215,6 +215,29 @@ body{
 
 
 /*DESTAQUES*/
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
+
+#addDesignForm{
+  display: flex;
+  flex-direction: column;
+}
+
+.inputText{
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.btn-sub{
+  width: 200px;
+  border: none;
+  background-color: white;
+}
+
 #featured-container{
     margin-bottom: 4em;
 }

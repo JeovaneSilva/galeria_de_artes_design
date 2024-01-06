@@ -37,3 +37,5 @@ function abrirModal() {
 function enviarEmail() {
     window.alert('Obrigado pela sua mensagem, aguarde um momento!')
 }
+
+
