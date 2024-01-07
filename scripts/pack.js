@@ -1,3 +1,8 @@
+function voltar() {
+    window.location.href="../pages/admin.html"
+}
+
+
 // PACKS codigo
 const storage = firebase.storage();
 const packsImportados = document.getElementById('packs-importados');
@@ -21,6 +26,13 @@ function addPackToPage(imageUrl, downloadUrl, fileName) {
     downloadLink.href = downloadUrl;
     downloadLink.download = fileName; // Usa o nome do arquivo fornecido
     downloadLink.appendChild(imgElement);
+
+    // Adiciona um ouvinte de evento de clique ao link de download
+    downloadLink.addEventListener('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        window.location.href = downloadUrl; // Redireciona para a URL da imagem para iniciar o download
+    });
 
     packDiv.appendChild(downloadLink);
 
