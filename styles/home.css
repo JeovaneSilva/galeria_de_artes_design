@@ -55,6 +55,7 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 10px;
   }
 
   header .logo h1{
@@ -64,6 +65,11 @@ body{
     color: white;
     padding-left: 20px;
     margin: 0;
+  }
+
+  header .logo img{
+    width: 40px;
+    height: 40px;
   }
 
   header nav{
@@ -93,6 +99,26 @@ body{
 
   header nav ul li a:hover {
     color: violet;
+  }
+
+  @media(max-width:550px){
+
+    header .logo img{
+      width: 25px;
+      height: 25px;
+    }
+
+    header nav ul {
+      gap: 15px;
+    }
+
+    header .logo h1{
+      font-size: 12px;    
+    }
+
+    header nav ul li a {
+      font-size: 12px;
+    }
   }
 
 /*SLIDERS*/
