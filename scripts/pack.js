@@ -1,5 +1,3 @@
-
-
 // PACKS codigo
 const storage = firebase.storage();
 const packsImportados = document.getElementById('packs-importados');
@@ -9,7 +7,7 @@ const addPackForm = document.getElementById('addPackForm');
 const packsRef = firebase.database().ref('packs');
 
 // Função para criar e adicionar a estrutura HTML do pack
-function addPackToPage(imageUrl) {
+function addPackToPage(imageUrl, downloadUrl, fileName) {
     const packDiv = document.createElement('div');
     packDiv.className = 'col-2 col-md-2';
 
@@ -18,38 +16,48 @@ function addPackToPage(imageUrl) {
     imgElement.alt = 'Imagem do Pack';
     imgElement.className = 'img-fluid';
 
-    packDiv.appendChild(imgElement);
-    
+    // Adiciona um link de download à imagem
+    const downloadLink = document.createElement('a');
+    downloadLink.href = downloadUrl;
+    downloadLink.download = fileName; // Usa o nome do arquivo fornecido
+    downloadLink.appendChild(imgElement);
+
+    packDiv.appendChild(downloadLink);
+
     packsImportados.appendChild(packDiv);
 }
 
 // Adicionar um ouvinte para o formulário de adição de pack
-addPackForm.addEventListener('submit', function(e) {
+addPackForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const file = addPackForm.querySelector('input[type=file]').files[0];
 
-    // Enviar arquivo para o Firebase Storage
-    const uploadTask = storage.ref(`packs/${file.name}`).put(file);
+    // Gera um UID (identificador único) para o nome do arquivo
+    const uid = firebase.auth().currentUser.uid;
+    const fileName = `${uid}_${Date.now()}_${file.name}`;
 
-    uploadTask.on("state_changed", function(snapshot) {
+    // Enviar arquivo para o Firebase Storage
+    const uploadTask = storage.ref(`packs/${fileName}`).put(file);
+
+    uploadTask.on("state_changed", function (snapshot) {
         // Atualizações de progresso, se necessário
-    }, function(error) {
+    }, function (error) {
         console.error("Erro durante o upload:", error);
-    }, function() {
+    }, function () {
         // Upload bem-sucedido
         console.log('Upload realizado com sucesso');
 
         // Obter a URL da imagem após o upload
-        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+        uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
             // Adicionar a informação ao Firebase Realtime Database
-            packsRef.push({ imageUrl: downloadURL });
+            packsRef.push({ imageUrl: downloadURL, downloadUrl: downloadURL, fileName: fileName });
         });
     });
 });
 
 // Adicionar packs existentes do Realtime Database na página
-packsRef.on('child_added', function(snapshot) {
+packsRef.on('child_added', function (snapshot) {
     const pack = snapshot.val();
-    addPackToPage(pack.imageUrl);
+    addPackToPage(pack.imageUrl, pack.downloadUrl, pack.fileName);
 });

@@ -1,7 +1,11 @@
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      window.location.href="../pages/home.html"
+        if (user.uid == "UQ45sWhvISX7MQeXundMEVMOcSf1") {
+            window.location.href="../pages/admin.html"
+        } else {
+            window.location.href="../pages/home.html"
+        }
     } else {
       alert('Usuário não logado');
     }
